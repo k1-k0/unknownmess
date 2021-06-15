@@ -9,7 +9,6 @@ To practice implementing services using Asyncio + Python + GraphQL
 ### Tools:
 - main: Python 3.9 + asyncio
 - web-framework: aiohttp
-- ASGI server: uvicorn
 - ORM: peewee-async
 - Database: PostgreSQL
 - Database driver: aiopg
