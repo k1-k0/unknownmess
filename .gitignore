@@ -1,0 +1,12 @@
+# VSCode
+.vscode/
+
+# Environment
+env/
+
+# Python files
+__pycache__/
+*.py[cod]
+
+# Personal prepare shell script
+prepare.sh
