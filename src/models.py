@@ -1,3 +1,5 @@
+import datetime as dt
+
 import config
 
 from peewee import (
@@ -14,6 +16,7 @@ database = PostgresqlDatabase(
     user=config.database_user,
     password=config.database_pass,
     host=config.database_host,
+    port=config.database_port,
 )
 
 
@@ -26,7 +29,7 @@ class Message(BaseModel):
     id = AutoField(unique=True)
     title = CharField(max_length=70)
     text = CharField(max_length=200)
-    created = DateTimeField()
+    created = DateTimeField(default=dt.datetime.now)
 
 
 class Emotion(BaseModel):
@@ -35,9 +38,5 @@ class Emotion(BaseModel):
     count = IntegerField(default=0)
 
 
-def create_tables():
-    with database:
-        database.create_tables([Message, Emotion])
-
-
 objects = Manager(database)
+objects.database.allow_sync = False
