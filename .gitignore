@@ -10,3 +10,6 @@ __pycache__/
 
 # Personal prepare shell script
 prepare.sh
+
+# env files
+*.env
