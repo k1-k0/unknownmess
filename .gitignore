@@ -13,3 +13,4 @@ prepare.sh
 
 # env files
 *.env
+!template.env
