@@ -1,6 +1,6 @@
 Unknownmess
 ===
-Service for exchanging messages between strangers.
+Service for exchanging memo between strangers.
 
 ## Goal
 To practice implementing services using Asyncio + Python + GraphQL
